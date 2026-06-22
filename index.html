@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shortrail — AI that ships</title>
+  <meta name="description" content="Shortrail is an AI consultancy that helps companies turn AI from promising demos into systems they can run in production — multi-agent workflows, retrieval, and orchestration built for the real world." />
+
+  <meta property="og:title" content="Shortrail — AI that ships" />
+  <meta property="og:description" content="AI consultancy. Turning AI from promising demos into production systems that hold up in the real world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shortrail.net" />
+  <meta property="og:image" content="https://shortrail.net/assets/mark-green.png" />
+
+  <link rel="icon" type="image/png" href="assets/mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Shortrail home">
+        <img class="brand__mark" src="assets/mark.png" alt="" width="32" height="32" />
+        <img class="brand__word" src="assets/wordmark.png" alt="" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="btn btn--ghost nav__cta" href="#contact">Get in touch</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <img class="hero__mark reveal" src="assets/mark.png" alt="Shortrail" width="160" height="160" />
+        <img class="hero__wordmark reveal" src="assets/wordmark.png" alt="Shortrail" />
+        <p class="eyebrow reveal">AI consultancy</p>
+        <h1 class="hero__title reveal">AI that ships —<br />and stays on the rails.</h1>
+        <p class="hero__lede reveal">
+          We turn AI from promising demos into systems you can actually run in
+          production — multi-agent workflows, retrieval, and orchestration built to
+          hold up in the real world.
+        </p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#contact">Start a project</a>
+          <a class="btn btn--ghost" href="#services">See what we do</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow reveal">What we do</p>
+        <h2 class="section__title reveal">Two ways to work together</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true">&#9632;</span>
+            <h3>Build</h3>
+            <p>
+              Production AI systems — multi-agent orchestration, retrieval, and agent
+              workflows, built to run reliably in the real world, not just demo well.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true">&#9650;</span>
+            <h3>Advise</h3>
+            <p>
+              Strategy and architecture — where AI actually fits, what's feasible,
+              and how to de-risk it. Architecture reviews, technical due diligence,
+              and a clear path from idea to delivery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="about">
+      <div class="container about">
+        <div class="about__body reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section__title">Engineering rigor, applied to AI</h2>
+          <p>Shortrail is an AI consultancy built on a simple idea: in production, AI
+            is an engineering problem, not a demo. We design and build systems that
+            hold up once real data and real users hit them.</p>
+          <p>Our roots are in optimization, earthquake engineering, and risk analysis
+            — disciplines where mistakes carry real cost. We bring that same rigor to
+            AI, across a range of industries.</p>
+          <p>Senior and hands-on, with no layers in between. You work directly with
+            the people who build your system, and you get something built to last —
+            not slideware.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="contact">
+      <div class="container contact">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="section__title reveal">Let's build something.</h2>
+        <p class="contact__lede reveal">
+          Have an AI problem worth solving, or a team that wants to level up? Tell us
+          about it.
+        </p>
+        <div class="contact__actions reveal">
+          <a class="btn btn--primary" href="mailto:hello@shortrail.net">hello@shortrail.net</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img class="footer__word" src="assets/wordmark.png" alt="Shortrail" />
+      <span class="footer__meta">&copy; <span id="year">2026</span> Shortrail &middot; shortrail.net</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const toggle = document.getElementById('navToggle');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('.nav__links a').forEach((a) =>
+      a.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach((el) => el.classList.add('is-in'));
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+      reveals.forEach((el) => io.observe(el));
+
+      window.addEventListener('load', () =>
+        reveals.forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-in');
+        })
+      );
+    }
+  </script>
+</body>
+</html>
